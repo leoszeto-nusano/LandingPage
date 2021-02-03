@@ -1,0 +1,26 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+/* system typefaces */
+$serif: Georgia, Times, serif !default;
+$sans-serif: Montserrat -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+.masthead {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  height: 75px;
+}
+
+body {
+  padding: 75px 0 0; // padding-top equal to masthead height or greater
+}
